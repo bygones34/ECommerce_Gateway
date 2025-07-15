@@ -1,0 +1,9 @@
+﻿services:
+  ecommerce.gateway:
+    image: ecommerce.gateway
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "9000:7000"
+    container_name: ecommerce-gateway-container
