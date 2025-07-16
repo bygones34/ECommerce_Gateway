@@ -37,4 +37,4 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Push Docker image
-        run: docker push yourdockerhubusername/ecommerce-gateway:latest
+        run: docker push alperdursuun/ecommerce-gateway:latest
