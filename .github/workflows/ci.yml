@@ -19,13 +19,13 @@ jobs:
           dotnet-version: '9.0.x'
 
       - name: Restore dependencies
-        run: dotnet restore ./ECommerce_Gateway/ECommerce.Gateway.csproj
+        run: dotnet restore ./ECommerce.Gateway.csproj
 
       - name: Build
-        run: dotnet build ./ECommerce_Gateway/ECommerce.Gateway.csproj --configuration Release --no-restore
+        run: dotnet build ./ECommerce.Gateway.csproj --configuration Release --no-restore
 
       - name: Publish
-        run: dotnet publish ./ECommerce_Gateway/ECommerce.Gateway.csproj --configuration Release --no-build -o ./publish
+        run: dotnet publish ./ECommerce.Gateway.csproj --configuration Release --no-build -o ./publish
 
       - name: Build Docker image
         run: docker build -t yourdockerhubusername/ecommerce-gateway:latest ./ECommerce_Gateway
