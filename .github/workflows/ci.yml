@@ -28,7 +28,7 @@ jobs:
         run: dotnet publish ./ECommerce.Gateway.csproj --configuration Release --no-build -o ./publish
 
       - name: Build Docker image
-        run: docker build -t alperdursuun/ecommerce-gateway:latest ./ECommerce_Gateway
+        run: docker build -t alperdursuun/ecommerce-gateway:latest ./
 
       - name: Login to DockerHub
         uses: docker/login-action@v2
